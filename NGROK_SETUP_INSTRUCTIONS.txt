@@ -1,0 +1,74 @@
+================================================================================
+NGROK SETUP - REQUIRED TO COMPLETE THEPOPEBOT INSTALLATION
+================================================================================
+
+ThePopbot is installed and running on port 3000, but needs ngrok to be 
+accessible from the internet (for GitHub webhooks and Telegram).
+
+STEP-BY-STEP INSTRUCTIONS:
+================================================================================
+
+1. GET NGROK AUTHTOKEN
+   - Visit: https://dashboard.ngrok.com/get-started/your-authtoken
+   - Copy your authtoken
+
+2. CONFIGURE NGROK
+   Run this command (replace YOUR_TOKEN with your actual token):
+   
+   ngrok config add-authtoken YOUR_TOKEN
+
+3. START NGROK TUNNEL
+   Run this command in a new terminal:
+   
+   ngrok http 3000
+
+   You'll see output like:
+   Forwarding  https://abc123.ngrok-free.app -> http://localhost:3000
+   
+   Copy the https URL (e.g., https://abc123.ngrok-free.app)
+
+4. UPDATE CONFIGURATION
+   Run these commands (replace YOUR_NGROK_URL with the URL from step 3):
+   
+   cd /root/thepopebot-agent
+   export NGROK_URL="https://your-url.ngrok-free.app"
+   sed -i "s|APP_URL=.*|APP_URL=$NGROK_URL|" .env
+   sed -i "s|APP_HOSTNAME=.*|APP_HOSTNAME=$(echo $NGROK_URL | sed 's|https://||')|" .env
+   gh variable set APP_URL --body "$NGROK_URL" --repo MaheshBhairi2315/thepopebot
+   docker restart thepopebot-event-handler
+
+5. SETUP TELEGRAM WEBHOOK
+   Run:
+   
+   npm run setup-telegram
+
+6. PUSH TO GITHUB
+   Run:
+   
+   git add .
+   git commit -m "Complete thepopebot setup"
+   git push -u origin main
+
+7. ACCESS YOUR BOT
+   - Web Interface: Visit your ngrok URL
+   - Telegram: Message your bot with: verify-09d7f5b2e73d
+
+================================================================================
+QUICK TEST:
+================================================================================
+
+After ngrok is running, test with:
+curl https://your-ngrok-url.ngrok-free.app/api/ping
+
+Should return: {"message":"Pong!"}
+
+================================================================================
+IMPORTANT NOTES:
+================================================================================
+
+- Free ngrok URLs change every time you restart ngrok
+- When ngrok URL changes, repeat steps 4-5
+- Keep ngrok running in a separate terminal/screen session
+- For production, consider ngrok paid plan or use a VPS with a domain
+
+================================================================================
