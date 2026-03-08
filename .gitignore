@@ -43,3 +43,12 @@ temp/
 
 # Data (SQLite memory, etc.)
 data/
+
+# Installation documentation (contains environment-specific info)
+INSTALLATION_SUMMARY.md
+SETUP_COMPLETE.md
+README_FIRST.txt
+NGROK_SETUP_INSTRUCTIONS.txt
+FINAL_INSTALLATION_REPORT.md
+*_INSTALLATION_*.md
+*_SETUP_*.md
