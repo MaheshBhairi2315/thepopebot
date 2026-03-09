@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam & Bean | Artisan Coffee House</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-mug-hot"></i>
+                <span>Steam & Bean</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="order-btn">Order Online</button>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tagline">Since 2018</span>
+            <h1>Experience the Art of<br><span class="accent">Coffee</span></h1>
+            <p>Sourced from the world's finest plantations, roasted to perfection, and brewed with passion. Your perfect cup awaits.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                <a href="#about" class="btn btn-secondary">Our Story</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Coffee Varieties</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">15k+</span>
+                <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4.9</span>
+                <span class="stat-label">Rating</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Ethically Sourced</h3>
+                    <p>Direct trade relationships with farmers ensure fair wages and sustainable practices</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Freshly Roasted</h3>
+                    <p>Small-batch roasting daily for maximum flavor and aroma in every cup</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Made with Love</h3>
+                    <p>Our passionate baristas craft each drink with attention to every detail</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-bg-text">ABOUT</div>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="about-img-placeholder">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="years">8+</span>
+                        <span class="text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-tag">Our Story</span>
+                    <h2>Crafting Moments of Joy, One Cup at a Time</h2>
+                    <p class="lead">Steam & Bean began with a simple belief: that coffee should be an experience, not just a beverage. Founded by two friends with a passion for exceptional coffee, we've grown from a tiny corner shop to a beloved community gathering place.</p>
+                    <p>Our journey took us to the misty mountains of Ethiopia, the volcanic slopes of Guatemala, and the lush highlands of Colombia. We work directly with farmers, paying premium prices for their finest beans, because great coffee starts with respect for those who grow it.</p>
+                    <div class="about-features">
+                        <div class="about-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Organic Beans</span>
+                        </div>
+                        <div class="about-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Locally Baked Pastries</span>
+                        </div>
+                        <div class="about-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Plant-Based Milk Options</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Visit Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="menu-pattern"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Menu</span>
+                <h2>Sip & Savor</h2>
+                <p>Every drink is handcrafted with premium ingredients and attention to detail</p>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="coffee">Coffee</button>
+                <button class="menu-tab" data-category="cold">Cold Brews</button>
+                <button class="menu-tab" data-category="tea">Tea</button>
+                <button class="menu-tab" data-category="pastry">Pastries</button>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-category active" data-category="coffee">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder">
+                                    <i class="fas fa-mug-hot"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Espresso</h4>
+                                    <span class="price">$3.50</span>
+                                </div>
+                                <p>Rich, bold shot of pure coffee essence</p>
+                                <span class="badge">Popular</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder">
+                                    <i class="fas fa-coffee"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Cappuccino</h4>
+                                    <span class="price">$4.75</span>
+                                </div>
+                                <p>Equal parts espresso, steamed milk, and silky foam</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder latte">
+                                    <i class="fas fa-mug-hot"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Signature Latte</h4>
+                                    <span class="price">$5.25</span>
+                                </div>
+                                <p>House-made vanilla, oat milk, double shot</p>
+                                <span class="badge signature">Signature</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder mocha">
+                                    <i class="fas fa-mug-hot"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Mocha</h4>
+                                    <span class="price">$5.00</span>
+                                </div>
+                                <p>Espresso meets rich chocolate and steamed milk</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder">
+                                    <i class="fas fa-mug-hot"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Americano</h4>
+                                    <span class="price">$3.75</span>
+                                </div>
+                                <p>Smooth espresso diluted with hot water</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder macchiato">
+                                    <i class="fas fa-mug-hot"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Caramel Macchiato</h4>
+                                    <span class="price">$5.50</span>
+                                </div>
+                                <p>Vanilla milk, espresso, topped with caramel drizzle</p>
+                                <span class="badge">Popular</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category" data-category="cold">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder cold">
+                                    <i class="fas fa-glass-water"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Cold Brew</h4>
+                                    <span class="price">$4.50</span>
+                                </div>
+                                <p>Steeped 20 hours for smooth, low-acidity flavor</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder cold">
+                                    <i class="fas fa-glass-water"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Nitro Cold Brew</h4>
+                                    <span class="price">$5.00</span>
+                                </div>
+                                <p>Infused with nitrogen for a creamy, stout-like texture</p>
+                                <span class="badge signature">Must Try</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder cold">
+                                    <i class="fas fa-glass-water"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Iced Latte</h4>
+                                    <span class="price">$5.25</span>
+                                </div>
+                                <p>Espresso and milk over ice</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder cold">
+                                    <i class="fas fa-glass-water"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Frappé</h4>
+                                    <span class="price">$5.75</span>
+                                </div>
+                                <p>Blended ice, espresso, and your choice of flavor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category" data-category="tea">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder tea">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Matcha Latte</h4>
+                                    <span class="price">$5.50</span>
+                                </div>
+                                <p>Ceremonial grade matcha with steamed milk</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder tea">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Chai Latte</h4>
+                                    <span class="price">$4.75</span>
+                                </div>
+                                <p>House-spiced black tea concentrate with milk</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder tea">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Earl Grey</h4>
+                                    <span class="price">$3.50</span>
+                                </div>
+                                <p>Loose leaf, bergamot-forward black tea</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category" data-category="pastry">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder pastry">
+                                    <i class="fas fa-bread-slice"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Almond Croissant</h4>
+                                    <span class="price">$4.75</span>
+                                </div>
+                                <p>Flaky, filled with almond cream, topped with sliced almonds</p>
+                                <span class="badge">Fresh Daily</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder pastry">
+                                    <i class="fas fa-cookie"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Chocolate Chip Cookie</h4>
+                                    <span class="price">$3.25</span>
+                                </div>
+                                <p>Sea salt, brown butter, dark chocolate chunks</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <div class="menu-placeholder pastry">
+                                    <i class="fas fa-birthday-cake"></i>
+                                </div>
+                            </div>
+                            <div class="menu-item-info">
+                                <div class="menu-item-header">
+                                    <h4>Lemon Loaf</h4>
+                                    <span class="price">$3.75</span>
+                                </div>
+                                <p>Moist, tangy, with lemon glaze</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-footer">
+                <p>Milk alternatives available: Oat, Almond, Coconut (+$0.75)</p>
+                <a href="#" class="btn btn-outline">Download Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Gallery</span>
+                <h2>The Steam & Bean Experience</h2>
+                <p>Step inside our warm, inviting space designed for comfort and community</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-store"></i>
+                        <span>Cozy Interior</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-mug-hot"></i>
+                        <span>Latte Art</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-bread-slice"></i>
+                        <span>Bakery</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-seedling"></i>
+                        <span>Beans</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The best coffee in the city, hands down. The atmosphere is warm and welcoming, and the baristas remember your name and order. This is my third home."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h5>Sarah Mitchell</h5>
+                            <span>Regular Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The Nitro Cold Brew is life-changing. Smooth, creamy, and perfectly balanced. I drive 20 minutes just for this. Worth every mile."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JC</div>
+                        <div class="author-info">
+                            <h5>James Chen</h5>
+                            <span>Coffee Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"A wonderful spot for remote work. Great wifi, plenty of outlets, and the pastries are baked fresh every morning. The almond croissant is a must!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ER</div>
+                        <div class="author-info">
+                            <h5>Emily Rodriguez</h5>
+                            <span>Freelance Designer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Visit Us</span>
+                    <h2>Come Say Hello</h2>
+                    <p>We're located in the heart of the arts district. Come enjoy a perfect cup in our cozy space, or grab something to go.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5>Address</h5>
+                                <p>124 Artisan Avenue<br>District 5, Seattle, WA 98101</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h5>Hours</h5>
+                                <p>Mon - Fri: 6:30am - 7:00pm<br>Sat - Sun: 7:00am - 8:00pm</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>(206) 555-0147</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>hello@streamandbean.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <h3>Send us a Message</h3>
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="map-area">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <span>Interactive Map</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-bg"></div>
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join the Steam & Bean Family</h2>
+                <p>Subscribe for exclusive offers, brewing tips, and first access to our seasonal specials</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">
+                            <i class="fas fa-mug-hot"></i>
+                            <span>Steam & Bean</span>
+                        </a>
+                        <p>Crafting exceptional coffee experiences since 2018. Every cup tells a story of passion, sustainability, and community.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Catering</a></li>
+                            <li><a href="#">Wholesale Beans</a></li>
+                            <li><a href="#">Private Events</a></li>
+                            <li><a href="#">Barista Training</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Steam & Bean Coffee House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
