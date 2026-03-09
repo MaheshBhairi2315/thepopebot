@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew & Bloom | Artisan Coffee House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">☕</span>
+                <span class="logo-text">Brew & Bloom</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#locations" class="nav-link">Locations</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-cart" aria-label="Shopping cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"/>
+                        <circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="btn-order">Order Online</button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-tagline">EST. 2024</span>
+            <h1 class="hero-title">
+                Where Every Cup
+                <span class="highlight">Tells a Story</span>
+            </h1>
+            <p class="hero-description">
+                Experience the art of coffee-making with ethically sourced beans, 
+                expertly crafted by our passionate baristas in a warm, welcoming space.
+            </p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">
+                    <span>View Menu</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#locations" class="btn btn-secondary">
+                    Find a Location
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">15K+</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Coffee Varieties</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Locations</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Ethically Sourced</h3>
+                    <p>Direct relationships with farmers ensure fair prices and exceptional quality beans from sustainable farms.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Expertly Crafted</h3>
+                    <p>Our skilled baristas use precise techniques and state-of-the-art equipment for the perfect cup every time.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3>Community First</h3>
+                    <p>More than just coffee – we're a gathering place for neighbors, remote workers, and coffee enthusiasts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="image-main">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80" alt="Coffee shop interior">
+                    </div>
+                    <div class="image-float">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80" alt="Latte art">
+                    </div>
+                    <div class="experience-badge">
+                        <span class="years">10+</span>
+                        <span class="text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-title">Crafting Moments of Joy, One Cup at a Time</h2>
+                    <p class="section-description">
+                        Founded in 2014, Brew & Bloom began with a simple mission: to create a space where exceptional coffee meets genuine human connection. Our founder, Maria Santos, spent years traveling to coffee-growing regions, building relationships with farmers who share our passion for quality.
+                    </p>
+                    <p class="section-description">
+                        Today, we've grown to 12 locations, but our core values remain unchanged. Every bean is roasted in small batches, every drink is crafted with care, and every customer is treated like family.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Small-batch roasting</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Sustainably sourced</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Locally baked pastries</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-text">
+                        Learn more about us
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Menu</span>
+                <h2 class="section-title">Discover Your Perfect Cup</h2>
+                <p class="section-description">
+                    From rich espressos to refreshing cold brews, explore our carefully curated selection of coffee and treats.
+                </p>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="coffee">Coffee</button>
+                <button class="tab-btn" data-tab="cold">Cold Drinks</button>
+                <button class="tab-btn" data-tab="tea">Tea & More</button>
+                <button class="tab-btn" data-tab="pastries">Pastries</button>
+            </div>
+
+            <div class="menu-content">
+                <!-- Coffee Tab -->
+                <div class="menu-panel active" id="coffee">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80" alt="Espresso">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Espresso</h4>
+                                    <span class="price">$3.50</span>
+                                </div>
+                                <p>Rich, bold, and perfectly balanced single shot</p>
+                                <span class="calories">5 cal</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1570968992363-59e9b0b73c22?w=400&q=80" alt="Cappuccino">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Cappuccino</h4>
+                                    <span class="price">$4.50</span>
+                                </div>
+                                <p>Espresso with steamed milk and velvety foam</p>
+                                <span class="calories">80 cal</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400&q=80" alt="Latte">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Caramel Latte</h4>
+                                    <span class="price">$5.00</span>
+                                </div>
+                                <p>Smooth espresso with caramel and steamed milk</p>
+                                <span class="calories">190 cal</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&q=80" alt="Pour Over">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Pour Over</h4>
+                                    <span class="price">$4.50</span>
+                                </div>
+                                <p>Hand-poured single origin with delicate notes</p>
+                                <span class="calories">5 cal</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400&q=80" alt="Americano">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Americano</h4>
+                                    <span class="price">$3.50</span>
+                                </div>
+                                <p>Espresso diluted with hot water</p>
+                                <span class="calories">5 cal</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1551030173-122aabc4489c?w=400&q=80" alt="Mocha">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Signature Mocha</h4>
+                                    <span class="price">$5.50</span>
+                                </div>
+                                <p>Espresso with rich chocolate and whipped cream</p>
+                                <span class="calories">280 cal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cold Drinks Tab -->
+                <div class="menu-panel" id="cold">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1517701600949-ada3e91e018c?w=400&q=80" alt="Cold Brew">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Cold Brew</h4>
+                                    <span class="price">$4.50</span>
+                                </div>
+                                <p>Steeped 20 hours for smooth, low-acidity flavor</p>
+                                <span class="calories">5 cal</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe6d8eb2?w=400&q=80" alt="Iced Latte">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Iced Vanilla Latte</h4>
+                                    <span class="price">$5.00</span>
+                                </div>
+                                <p>Espresso with vanilla syrup and cold milk</p>
+                                <span class="calories">150 cal</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1517959105821-eaf2591984ca?w=400&q=80" alt="Frappuccino">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Coffee Frappé</h4>
+                                    <span class="price">$5.50</span>
+                                </div>
+                                <p>Blended coffee with cream and chocolate drizzle</p>
+                                <span class="calories">320 cal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tea Tab -->
+                <div class="menu-panel" id="tea">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80" alt="Matcha">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Ceremonial Matcha</h4>
+                                    <span class="price">$5.00</span>
+                                </div>
+                                <p> premium Japanese matcha with steamed milk</p>
+                                <span class="calories">90 cal</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=400&q=80" alt="Chai">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Spiced Chai Latte</h4>
+                                    <span class="price">$4.50</span>
+                                </div>
+                                <p>House-made chai with warming spices</p>
+                                <span class="calories">180 cal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pastries Tab -->
+                <div class="menu-panel" id="pastries">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&q=80" alt="Croissant">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Butter Croissant</h4>
+                                    <span class="price">$3.50</span>
+                                </div>
+                                <p>Flaky, buttery, baked fresh daily</p>
+                                <span class="calories">280 cal</span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=400&q=80" alt="Muffin">
+                                <button class="add-to-cart">+</button>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Blueberry Muffin</h4>
+                                    <span class="price">$3.00</span>
+                                </div>
+                                <p>Loaded with fresh berries and streusel top</p>
+                                <span class="calories">340 cal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-cta">
+                <a href="#" class="btn btn-outline">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="locations">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Visit Us</span>
+                <h2 class="section-title">Find Your Local Brew & Bloom</h2>
+                <p class="section-description">
+                    With 12 locations across the city, your favorite coffee is never far away.
+                </p>
+            </div>
+
+            <div class="locations-grid">
+                <div class="location-card featured">
+                    <div class="location-image">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80" alt="Downtown location">
+                        <span class="badge">Flagship</span>
+                    </div>
+                    <div class="location-content">
+                        <h3>Downtown</h3>
+                        <p class="location-address">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            123 Main Street, Downtown
+                        </p>
+                        <div class="location-hours">
+                            <span class="hours-label">Open today:</span>
+                            <span class="hours-time">6:00 AM - 8:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-sm">Get Directions</a>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&q=80" alt="Westside location">
+                    </div>
+                    <div class="location-content">
+                        <h3>Westside</h3>
+                        <p class="location-address">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            456 West Avenue
+                        </p>
+                        <div class="location-hours">
+                            <span class="hours-label">Open today:</span>
+                            <span class="hours-time">7:00 AM - 7:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline">Get Directions</a>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80" alt="Eastside location">
+                    </div>
+                    <div class="location-content">
+                        <h3>Eastside</h3>
+                        <p class="location-address">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            789 East Boulevard
+                        </p>
+                        <div class="location-hours">
+                            <span class="hours-label">Open today:</span>
+                            <span class="hours-time">6:30 AM - 8:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2>Stay in the Loop</h2>
+                    <p>Subscribe to get exclusive offers, seasonal drink updates, and brewing tips delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <span class="newsletter-note">No spam, unsubscribe anytime.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">☕</span>
+                        <span class="logo-text">Brew & Bloom</span>
+                    </a>
+                    <p>Crafting exceptional coffee experiences since 2014. Every cup tells a story of passion, quality, and community.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>For You</h4>
+                    <ul>
+                        <li><a href="#">Loyalty Program</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            hello@brewandbloom.com
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            (555) 123-4567
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Brew & Bloom Coffee Co. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
