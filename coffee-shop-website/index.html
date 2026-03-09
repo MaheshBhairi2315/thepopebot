@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grind Coffee Co. | Artisan Coffee & Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                    <line x1="6" y1="1" x2="6" y2="4"/>
+                    <line x1="10" y1="1" x2="10" y2="4"/>
+                    <line x1="14" y1="1" x2="14" y2="4"/>
+                </svg>
+                The Grind
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#visit">Visit</a>
+                <a href="#contact" class="btn btn-outline">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag">Est. 2019 • San Francisco</span>
+            <h1>Crafted with Passion,<br>Served with Soul</h1>
+            <p class="hero-description">Experience artisan coffee in a space where community thrives. Every cup tells a story of sustainable sourcing and meticulous craftsmanship.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#visit" class="btn btn-secondary">Find Us</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="image-card image-1">
+                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&h=800&fit=crop" alt="Barista pouring latte art">
+                    </div>
+                    <div class="image-card image-2">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop" alt="Fresh roasted coffee beans">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">Our Story</span>
+                    <h2>Where Coffee<br>Meets Community</h2>
+                    <p class="section-subtitle">Founded on the belief that great coffee brings people together, The Grind has been a cornerstone of the Mission District since 2019.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Community First</h3>
+                                <p>A gathering place for neighbors, creatives, and coffee enthusiasts alike.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Sustainable Sourcing</h3>
+                                <p>Direct-trade partnerships with farmers across Ethiopia, Colombia, and Guatemala.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.7 7l-5.3 8.8a2 2 0 0 1-3.4 0L6.3 13a2 2 0 0 0-3.4 0L.3 19"/>
+                                    <path d="M16 3l3.3 5.5"/>
+                                    <path d="M3 3v14"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Roasted In-House</h3>
+                                <p>Small-batch roasting weekly for peak freshness and unique flavor profiles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Menu</span>
+                <h2>Curated for Coffee Lovers</h2>
+                <p class="section-subtitle">From single-origin pour-overs to seasonal specialties</p>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="coffee">Coffee</button>
+                <button class="tab-btn" data-category="espresso">Espresso</button>
+                <button class="tab-btn" data-category="tea">Tea & More</button>
+                <button class="tab-btn" data-category="pastries">Pastries</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+                <!-- Coffee Items -->
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop" alt="Pour over coffee">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Single Origin Pour Over</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="menu-item-description">Rotating selection of Ethiopian, Kenyan, or Colombian beans. Served black to highlight origin characteristics.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop" alt="Iced coffee">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Cold Brew</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p class="menu-item-description">Steeped for 18 hours for a smooth, naturally sweet profile with low acidity. Served on draft.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop" alt="Nitro cold brew">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Nitro Cold Brew</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="menu-item-description">Infused with nitrogen for a creamy, stout-like texture. Topped with velvety foam.</p>
+                    </div>
+                </div>
+
+                <!-- Espresso Items -->
+                <div class="menu-item hidden" data-category="espresso">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1579992357154-faf4bde95b3d?w=400&h=300&fit=crop" alt="Espresso">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Signature Espresso</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p class="menu-item-description">Our house blend featuring notes of dark chocolate, caramel, and toasted almond.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="espresso">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1570968992193-fd108b00d682?w=400&h=300&fit=crop" alt="Cappuccino">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Cappuccino</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p class="menu-item-description">Perfectly balanced espresso with velvety steamed milk and dense microfoam.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="espresso">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop" alt="Latte">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Maple Oat Latte</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="menu-item-description">Seasonal favorite with house-made oat milk, pure maple syrup, and a dash of cinnamon.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="espresso">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop" alt="Flat white">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Flat White</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p class="menu-item-description">Australian-style with silky microfoam over double ristretto shots.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="espresso">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=400&h=300&fit=crop" alt="Mocha">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Midnight Mocha</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="menu-item-description">Single-origin Guatemalan chocolate, espresso, and vanilla bean whip.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="espresso">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1593443320739-77f74952d1fc?w=400&h=300&fit=crop" alt="Macchiato">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Cortado</h3>
+                            <span class="price">$4.00</span>
+                        </div>
+                        <p class="menu-item-description">Equal parts espresso and steamed milk. Pure, bold, and beautifully balanced.</p>
+                    </div>
+                </div>
+
+                <!-- Tea Items -->
+                <div class="menu-item hidden" data-category="tea">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=300&fit=crop" alt="Matcha">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Ceremonial Matcha</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="menu-item-description">Premium Uji matcha whisked to order. Available hot or iced.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="tea">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=300&fit=crop" alt="Chai latte">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Masala Chai Latte</h3>
+                            <span class="price">$5.00</span>
+                        </div>
+                        <p class="menu-item-description">House-spiced black tea with your choice of milk. Steeped fresh for each order.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="tea">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=400&h=300&fit=crop" alt="Herbal tea">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Loose Leaf Tea</h3>
+                            <span class="price">$4.00</span>
+                        </div>
+                        <p class="menu-item-description">Rotating selection of organic black, green, and herbal teas. Served in a pot for two.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="tea">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1560023907-5f339617ea30?w=400&h=300&fit=crop" alt="Hot chocolate">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Single-Origin Hot Chocolate</h3>
+                            <span class="price">$5.00</span>
+                        </div>
+                        <p class="menu-item-description">Guatemalan cacao, steamed milk, and house-made marshmallow. Decadent and rich.</p>
+                    </div>
+                </div>
+
+                <!-- Pastries Items -->
+                <div class="menu-item hidden" data-category="pastries">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=300&fit=crop" alt="Croissant">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Butter Croissant</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p class="menu-item-description">Layers of flaky, buttery goodness from a local French bakery. Baked fresh daily.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="pastries">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=400&h=300&fit=crop" alt="Muffin">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Wild Blueberry Muffin</h3>
+                            <span class="price">$4.00</span>
+                        </div>
+                        <p class="menu-item-description">Bursting with wild Maine blueberries and topped with streusel crumb.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="pastries">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1607958996331-99d843f9204b?w=400&h=300&fit=crop" alt="Avocado toast">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Avocado Toast</h3>
+                            <span class="price">$9.50</span>
+                        </div>
+                        <p class="menu-item-description">Sourdough, smashed avocado, radish, chili flakes, and lemon zest.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="pastries">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1606293926075-69a00febf280?w=400&h=300&fit=crop" alt="Cinnamon roll">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Weekend Cinnamon Roll</h3>
+                            <span class="price">$5.00</span>
+                        </div>
+                        <p class="menu-item-description">House-made dough, sweet cinnamon filling, cream cheese glaze. Only on Saturdays.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item hidden" data-category="pastries">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=400&h=300&fit=crop" alt="Cookies">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Sea Salt Chocolate Chip</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p class="menu-item-description">Giant cookie with 70% dark chocolate and flaky sea salt. Made with brown butter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Section -->
+    <section id="visit" class="visit">
+        <div class="visit-container">
+            <div class="visit-image">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&h=1000&fit=crop" alt="Coffee shop interior">
+            </div>
+            <div class="visit-content">
+                <span class="section-tag">Visit Us</span>
+                <h2>Come In,<br>Stay Awhile</h2>
+                
+                <div class="visit-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h3>Location</h3>
+                            <p>3180 Mission Street<br>San Francisco, CA 94110</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h3>Hours</h3>
+                            <p>Mon - Fri: 7am - 6pm<br>Sat - Sun: 8am - 7pm</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h3>Contact</h3>
+                            <p>(415) 555-0127<br>hello@thegrindcoffee.co</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Caffeinated</h2>
+                <p>Subscribe for updates on seasonal roasts, events, and exclusive offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                            <line x1="6" y1="1" x2="6" y2="4"/>
+                            <line x1="10" y1="1" x2="10" y2="4"/>
+                            <line x1="14" y1="1" x2="14" y2="4"/>
+                        </svg>
+                        The Grind
+                    </a>
+                    <p class="footer-tagline">Crafted with passion, served with soul.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#visit">Visit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>3180 Mission Street</li>
+                        <li>San Francisco, CA 94110</li>
+                        <li><a href="tel:4155550127">(415) 555-0127</a></li>
+                        <li><a href="mailto:hello@thegrindcoffee.co">hello@thegrindcoffee.co</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Grind Coffee Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
