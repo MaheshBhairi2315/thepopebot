@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern React app built with Tailwind CSS">
+    <title>React + Tailwind App</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- React 18 CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- Babel Standalone for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState } = React;
+        
+        // Feature Card Component
+        function FeatureCard({ icon, title, description }) {
+            return (
+                <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
+                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <span className="text-2xl">{icon}</span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+                </div>
+            );
+        }
+        
+        // Counter Component
+        function Counter() {
+            const [count, setCount] = useState(0);
+            
+            return (
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-md mx-auto">
+                    <h2 className="text-xl font-bold text-gray-800 mb-6 text-center">Interactive Counter</h2>
+                    
+                    <div className="flex items-center justify-center mb-6">
+                        <span className="text-5xl font-bold text-primary-600">{count}</span>
+                    </div>
+                    
+                    <div className="flex gap-3 justify-center">
+                        <button 
+                            onClick={() => setCount(c => c - 1)}
+                            className="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2"
+                        >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
+                            </svg>
+                            Decrement
+                        </button>
+                        
+                        <button 
+                            onClick={() => setCount(0)}
+                            className="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg font-medium transition-colors duration-200"
+                        >
+                            Reset
+                        </button>
+                        
+                        <button 
+                            onClick={() => setCount(c => c + 1)}
+                            className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors duration-200 flex items-center gap-2"
+                        >
+                            Increment
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    {count > 0 && (
+                        <p className="text-center text-sm text-gray-500 mt-4">
+                            You've clicked {count} time{count !== 1 ? 's' : ''}! 🎉
+                        </p>
+                    )}
+                </div>
+            );
+        }
+        
+        // Features Data
+        const features = [
+            {
+                icon: "⚡",
+                title: "Lightning Fast",
+                description: "Built with performance in mind. React's virtual DOM ensures minimal updates and maximum speed."
+            },
+            {
+                icon: "🎨",
+                title: "Beautiful Design",
+                description: "Styled with Tailwind CSS for a modern, responsive look that works on any device."
+            },
+            {
+                icon: "📱",
+                title: "Fully Responsive",
+                description: "Mobile-first design approach ensures a great experience on phones, tablets, and desktops."
+            },
+            {
+                icon: "🔧",
+                title: "Easy to Customize",
+                description: "Component-based architecture makes it simple to modify and extend functionality."
+            },
+            {
+                icon: "🚀",
+                title: "Production Ready",
+                description: "Clean code structure following React best practices for scalable applications."
+            },
+            {
+                icon: "💎",
+                title: "Modern Stack",
+                description: "Leveraging React 18 features and Tailwind's utility-first CSS for rapid development."
+            }
+        ];
+        
+        // Main App Component
+        function App() {
+            return (
+                <div className="min-h-screen">
+                    {/* Hero Section */}
+                    <header className="bg-gradient-to-br from-primary-600 via-primary-700 to-indigo-800 text-white">
+                        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+                            <div className="text-center">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
+                                    <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                                    React 18 + Tailwind CSS
+                                </div>
+                                
+                                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+                                    Build Something
+                                    <span className="block text-primary-100">Amazing Today</span>
+                                </h1>
+                                
+                                <p className="text-lg sm:text-xl text-primary-100 max-w-2xl mx-auto mb-8 leading-relaxed">
+                                    A modern React application demonstrating state management, component composition, 
+                                    and responsive design with Tailwind CSS.
+                                </p>
+                                
+                                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <button className="px-8 py-4 bg-white text-primary-700 rounded-xl font-semibold hover:bg-gray-50 transition-colors duration-200 shadow-lg">
+                                        Get Started
+                                    </button>
+                                    <button className="px-8 py-4 bg-primary-500/50 text-white rounded-xl font-semibold hover:bg-primary-500/70 transition-colors duration-200 backdrop-blur-sm border border-white/20">
+                                        Learn More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    {/* Counter Section */}
+                    <section className="py-16 px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-4xl mx-auto">
+                            <div className="text-center mb-12">
+                                <h2 className="text-3xl font-bold text-gray-900 mb-4">State Management Demo</h2>
+                                <p className="text-gray-600 max-w-xl mx-auto">
+                                    Experience React's useState hook in action with this interactive counter component.
+                                </p>
+                            </div>
+                            <Counter />
+                        </div>
+                    </section>
+                    
+                    {/* Features Grid */}
+                    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+                        <div className="max-w-6xl mx-auto">
+                            <div className="text-center mb-16">
+                                <h2 className="text-3xl font-bold text-gray-900 mb-4">Features & Capabilities</h2>
+                                <p className="text-gray-600 max-w-2xl mx-auto">
+                                    Everything you need to build modern web applications, bundled in a clean and intuitive package.
+                                </p>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {features.map((feature, index) => (
+                                    <FeatureCard key={index} {...feature} />
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Footer */}
+                    <footer className="bg-gray-900 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-6xl mx-auto">
+                            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+                                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <span className="font-semibold text-white">ReactApp</span>
+                                </div>
+                                
+                                <p className="text-sm">
+                                    Built with React 18, Tailwind CSS & Babel • No build step required
+                                </p>
+                                
+                                <div className="flex gap-6">
+                                    <a href="#" className="hover:text-white transition-colors">GitHub</a>
+                                    <a href="#" className="hover:text-white transition-colors">Docs</a>
+                                    <a href="#" className="hover:text-white transition-colors">Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            );
+        }
+        
+        // Render the App
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

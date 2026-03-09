@@ -1,0 +1,4 @@
+{
+  "title": "Create React 18 Standalone HTML App with Tailwind CSS and Interactive Components",
+  "job": "Create a standalone HTML file at `public/react-app.html` that includes:\n1. A complete React component rendered via CDN (using React 18, ReactDOM 18, and Babel standalone)\n2. Tailwind CSS via CDN for styling\n3. A nice UI component - build a clean card-based layout with a header, interactive counter component, and a list of features\n4. The page should be responsive and visually polished with Tailwind utility classes\n5. Include proper meta tags for viewport scaling\n\nThe React component should demonstrate state management (useState) and include:\n- A modern hero section with gradient background\n- An interactive counter with increment/decrement buttons\n- A feature cards grid\n- Clean typography and spacing using Tailwind"
+}
